@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CineZone bilan bog'lanish va kino tavsiyasi yuborish.">
+    <title>Bog'lanish | CineZone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo"><span>CINEZONE</span></div>
+            <ul class="sidebar-menu">
+                <li><a href="./index.html"><span>Bosh sahifa</span></a></li>
+                <li><a href="./loyihalar.html"><span>Trendlar</span></a></li>
+                <li><a href="./kitoblar.html"><span>Janrlar</span></a></li>
+                <li class="active"><a href="./aloqa.html"><span>Biz bilan bog'lanish</span></a></li>
+            </ul>
+            <div class="sidebar-footer"><a href="./index.html"><span>Bosh sahifaga qaytish</span></a></div>
+        </aside>
+
+        <main class="main-wrapper">
+            <section class="page-hero contact-hero">
+                <span class="page-eyebrow">CINEZONE / BOG'LANISH</span>
+                <h1>Savolingiz bormi?</h1>
+                <p>Film tavsiyasi yoki kino janrlari haqida bizga yozing.</p>
+            </section>
+
+            <section class="page-content contact-content">
+                <div class="contact-intro">
+                    <span class="content-kicker">BIZ BILAN BOG'LANING</span>
+                    <h2>Birgalikda tanlaymiz</h2>
+                    <p>Formani to'ldiring, sizga mos filmni topishga yordam beramiz.</p>
+                    <div class="contact-note">
+                        <span class="contact-note-mark" aria-hidden="true">CZ</span>
+                        <div>
+                            <strong>CineZone</strong>
+                            <span>Kino ixlosmandlari uchun tavsiyalar</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="./ariza.html" method="get">
+                    <div class="form-group">
+                        <label for="name">Ism</label>
+                        <input id="name" name="name" type="text" placeholder="Azizbek Karimov" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="azizbek@gmail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Mavzu</label>
+                        <select id="subject" name="subject" required>
+                            <option value="" selected disabled>Mavzuni tanlang</option>
+                            <option value="film">Film tavsiyasi</option>
+                            <option value="serial">Serial tavsiyasi</option>
+                            <option value="janr">Janr bo'yicha maslahat</option>
+                            <option value="boshqa">Boshqa savol</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Xabar</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Men komediyadan ko'proq tomosha qilaman..." required></textarea>
+                    </div>
+
+                    <button class="contact-submit" type="submit">Yuborish</button>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

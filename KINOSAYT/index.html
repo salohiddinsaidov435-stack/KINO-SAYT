@@ -1,0 +1,386 @@
+﻿<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CineZone - yangi filmlar, seriallar va trending kinolar uchun zamonaviy kino portal.">
+    <title>Bosh sahifa | CineZone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo"><span>CINEZONE</span></div>
+            <ul class="sidebar-menu">
+                <li class="active"><a href="./index.html"><span>Bosh sahifa</span></a></li>
+                <li><a href="./loyihalar.html"><span>Trendlar</span></a></li>
+                <li><a href="./kitoblar.html"><span>Janrlar</span></a></li>
+                <li><a href="./aloqa.html"><span>Biz bilan bog'lanish</span></a></li>
+            </ul>
+            <div class="sidebar-footer"><a href="./aloqa.html"><span>Rekomendatsiya so'rang</span></a></div>
+        </aside>
+
+        <main class="main-wrapper">
+            <section class="movie-hero">
+                <div class="hero-content">
+                    <span class="hero-kicker">HAFTA TAVSIYASI</span>
+                    <h1>Dune: Part Two</h1>
+                    <p>Arrakis taqdiri va insoniyat kelajagi uchun kurash. Haftaning eng ko'p tavsiya etilgan filmini tomosha qiling.</p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#trending">Filmlarni ko'rish</a>
+                        <a class="btn btn-secondary" href="./kino2.html">Film haqida</a>
+                    </div>
+
+                    <ul class="hero-meta">
+                        <li>⭐ 8.9 IMDb</li>
+                        <li>2024</li>
+                        <li>Sci‑Fi</li>
+                        <li>Adventure</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="search-panel">
+                <div class="search-panel-top">
+                    <div>
+                        <span class="content-kicker">QIDIRUV</span>
+                        <h2>Filmlar, janrlar yoki sarguzashtlarni izlang</h2>
+                    </div>
+                </div>
+
+                <div class="search-bar-wrap">
+                    <div class="search-input-box">
+                        <span class="search-icon">⌕</span>
+                        <input id="movieSearch" type="search" aria-label="Film nomi yoki janr bo'yicha qidirish" placeholder="Film nomi yoki janr kiriting...">
+                    </div>
+                    <button class="search-btn" type="button">Izlash</button>
+                </div>
+
+                <div class="filter-chips" aria-label="Film janrlari">
+                    <button class="chip active" data-filter="all" type="button">Barchasi</button>
+                    <button class="chip" data-filter="Action" type="button">Action</button>
+                    <button class="chip" data-filter="Drama" type="button">Drama</button>
+                    <button class="chip" data-filter="Thriller" type="button">Thriller</button>
+                    <button class="chip" data-filter="Adventure" type="button">Adventure</button>
+                    <button class="chip" data-filter="Sci-Fi" type="button">Sci-Fi</button>
+                    <button class="chip" data-filter="Crime" type="button">Crime</button>
+                    <button class="chip" data-filter="History" type="button">History</button>
+                </div>
+            </section>
+
+            <section class="carousel-section" aria-label="Tavsiya etilgan filmlar karuseli">
+                <div class="carousel-header">
+                    <div>
+                        <span class="content-kicker">TAVSIYA</span>
+                        <h2>Film oynasi</h2>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="nav-btn" type="button" data-dir="prev" aria-label="Oldingi">‹</button>
+                        <button class="nav-btn" type="button" data-dir="next" aria-label="Keyingi">›</button>
+                    </div>
+                </div>
+
+                <div class="carousel-track">
+                    <article class="slide active">
+                        <div class="slide-poster poster-one"></div>
+                        <div class="slide-info">
+                            <span class="slide-tag">Top pick</span>
+                            <h3>Dune: Part Two</h3>
+                            <p>Pol Atreydes Arrakisda fremenlar bilan birlashib, sayyora va insoniyat kelajagi uchun kurashadi.</p>
+                            <button class="trailer-btn" type="button" data-trailer="https://www.youtube.com/embed/Way9Dexny3w?autoplay=1">Treylerni ko'rish</button>
+                        </div>
+                    </article>
+
+                    <article class="slide">
+                        <div class="slide-poster poster-two"></div>
+                        <div class="slide-info">
+                            <span class="slide-tag">Drama</span>
+                            <h3>Oppenheimer</h3>
+                            <p>Tarixiy va ruhiy boylikka ega, bilim, va'da va ozodlik haqidagi ajoyib film.</p>
+                            <button class="trailer-btn" type="button" data-trailer="https://www.youtube.com/embed/uYPbbksJxIg?autoplay=1">Treylerni ko'rish</button>
+                        </div>
+                    </article>
+
+                    <article class="slide">
+                        <div class="slide-poster poster-three"></div>
+                        <div class="slide-info">
+                            <span class="slide-tag">Sci-Fi</span>
+                            <h3>Interstellar</h3>
+                            <p>Yulduzlararo sayohat, qadrli vaqti, va ajralib turuvchi kuchli kashfiyotlar.</p>
+                            <button class="trailer-btn" type="button" data-trailer="https://www.youtube.com/embed/zSWdZVtXT7E?autoplay=1">Treylerni ko'rish</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-shell" id="trending">
+                <div class="section-heading">
+                    <div>
+                        <span class="content-kicker">TRENDLAR</span>
+                        <h2>Bu hafta ko'rish uchun</h2>
+                    </div>
+                    <a class="text-link" href="./loyihalar.html">Barchasini ko'rish <span aria-hidden="true">&rarr;</span></a>
+                </div>
+
+                <div class="movie-grid" id="movieGrid">
+                    <article class="movie-card" data-title="Inception" data-genre="Sci-Fi Thriller" data-description="Xayol, ong va reallik o'rtasidagi xavfli yurishlar bilan to'ldirilgan film.">
+                        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=900&q=80" alt="Inception">
+                        <div class="movie-card-body">
+                            <div class="movie-meta-row">
+                                <span class="movie-tag">Sci-Fi</span>
+                                <span class="movie-score">8.8</span>
+                            </div>
+                            <h3>Inception</h3>
+                            <p>Xayol, ong va reallik o'rtasidagi xavfli yurishlar bilan to'ldirilgan film.</p>
+                            <a class="trailer-btn mini" href="./kino.html">Film haqida</a>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-title="The Dark Knight" data-genre="Action Thriller" data-description="Qora shahar, jasur qahramonlar va to'qnashuvli dramatik muqarrar vaziyatlar haqida film.">
+                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=900&q=80" alt="The Dark Knight">
+                        <div class="movie-card-body">
+                            <div class="movie-meta-row">
+                                <span class="movie-tag">Action</span>
+                                <span class="movie-score">9.0</span>
+                            </div>
+                            <h3>The Dark Knight</h3>
+                            <p>Qora shahar, jasur qahramonlar va to'qnashuvli dramatik muqarrar vaziyatlar haqida film.</p>
+                            <a class="trailer-btn mini" href="./kino5.html">Film haqida</a>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-title="The Matrix" data-genre="Sci-Fi Action" data-description="Real hayot, simulyatsiya va ozodlik haqidagi klassik va kuchli film.">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="The Matrix">
+                        <div class="movie-card-body">
+                            <div class="movie-meta-row">
+                                <span class="movie-tag">Sci-Fi</span>
+                                <span class="movie-score">8.7</span>
+                            </div>
+                            <h3>The Matrix</h3>
+                            <p>Real hayot, simulyatsiya va ozodlik haqidagi klassik va kuchli film.</p>
+                            <a class="trailer-btn mini" href="./kino8.html">Film haqida</a>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-title="Batman Begins" data-genre="Action Crime" data-description="Jasurlik, qo'rquv va hayotiy muammolarni boshdan kechiruvchi qudratli film.">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Batman Begins">
+                        <div class="movie-card-body">
+                            <div class="movie-meta-row">
+                                <span class="movie-tag">Action</span>
+                                <span class="movie-score">8.3</span>
+                            </div>
+                            <h3>Batman Begins</h3>
+                            <p>Jasurlik, qo'rquv va hayotiy muammolarni boshdan kechiruvchi qudratli film.</p>
+                            <a class="trailer-btn mini" href="./kino9.html">Film haqida</a>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-title="Guardians of the Galaxy" data-genre="Adventure" data-description="Xayoliy sayohatlar, yangi do‘stlar va koinotdagi g‘oyatlar bilan to‘la film.">
+                        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=900&q=80" alt="Guardians of the Galaxy">
+                        <div class="movie-card-body">
+                            <div class="movie-meta-row">
+                                <span class="movie-tag">Adventure</span>
+                                <span class="movie-score">8.1</span>
+                            </div>
+                            <h3>Guardians of the Galaxy</h3>
+                            <p>Xayoliy sayohatlar, yangi do‘stlar va koinotdagi g‘oyatlar bilan to‘la film.</p>
+                            <a class="trailer-btn mini" href="./kino10.html">Film haqida</a>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-title="Dune: Part Two" data-genre="Sci-Fi Adventure" data-description="Arrakis sayyorasida Pol Atreydes va fremenlarning ozodlik uchun kurashi.">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Dune: Part Two">
+                        <div class="movie-card-body">
+                            <div class="movie-meta-row">
+                                <span class="movie-tag">Sci-Fi</span>
+                                <span class="movie-score">8.9</span>
+                            </div>
+                            <h3>Dune: Part Two</h3>
+                            <p>Arrakis sayyorasida Pol Atreydes va fremenlarning ozodlik uchun kurashi.</p>
+                            <a class="trailer-btn mini" href="./kino2.html">Film haqida</a>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-title="Oppenheimer" data-genre="Drama History" data-description="J. Robert Oppenheimer va atom bombasining yaratilishi haqidagi tarixiy drama.">
+                        <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=900&q=80" alt="Oppenheimer">
+                        <div class="movie-card-body">
+                            <div class="movie-meta-row">
+                                <span class="movie-tag">Drama</span>
+                                <span class="movie-score">8.6</span>
+                            </div>
+                            <h3>Oppenheimer</h3>
+                            <p>J. Robert Oppenheimer va atom bombasining yaratilishi haqidagi tarixiy drama.</p>
+                            <a class="trailer-btn mini" href="./kino3.html">Film haqida</a>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-title="Interstellar" data-genre="Sci-Fi Drama" data-description="Insoniyat uchun yangi makon izlagan olimlarning yulduzlararo safari.">
+                        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=900&q=80" alt="Interstellar">
+                        <div class="movie-card-body">
+                            <div class="movie-meta-row">
+                                <span class="movie-tag">Sci-Fi</span>
+                                <span class="movie-score">8.7</span>
+                            </div>
+                            <h3>Interstellar</h3>
+                            <p>Insoniyat uchun yangi makon izlagan olimlarning yulduzlararo safari.</p>
+                            <a class="trailer-btn mini" href="./kino4.html">Film haqida</a>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-title="Blade Runner 2049" data-genre="Sci-Fi Thriller" data-description="Kelajakdagi Los-Anjelesda haqiqat va insoniylik sirlarini izlash.">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Blade Runner 2049">
+                        <div class="movie-card-body">
+                            <div class="movie-meta-row">
+                                <span class="movie-tag">Sci-Fi</span>
+                                <span class="movie-score">8.5</span>
+                            </div>
+                            <h3>Blade Runner 2049</h3>
+                            <p>Kelajakdagi Los-Anjelesda haqiqat va insoniylik sirlarini izlash.</p>
+                            <a class="trailer-btn mini" href="./kino6.html">Film haqida</a>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-title="Tenet" data-genre="Action Sci-Fi" data-description="Vaqt yo'nalishini o'zgartiruvchi texnologiya va maxfiy topshiriq.">
+                        <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=900&q=80" alt="Tenet">
+                        <div class="movie-card-body">
+                            <div class="movie-meta-row">
+                                <span class="movie-tag">Action</span>
+                                <span class="movie-score">8.4</span>
+                            </div>
+                            <h3>Tenet</h3>
+                            <p>Vaqt yo'nalishini o'zgartiruvchi texnologiya va maxfiy topshiriq.</p>
+                            <a class="trailer-btn mini" href="./kino7.html">Film haqida</a>
+                        </div>
+                    </article>
+                </div>
+                <p class="empty-state" id="noResults" role="status" hidden>Hech qanday film topilmadi. Boshqa nom yoki janr bilan qidiring.</p>
+            </section>
+
+            <section class="feature-strip">
+                <div class="feature-box accent-box">
+                    <span class="feature-label">TOP 10</span>
+                    <h3>Bugun eng ko'p ko'rilgan</h3>
+                    <p>Adrenalinli sahnalar, asosiy qahramonlar va ajoyib ovoz effektlari.</p>
+                </div>
+
+                <div class="feature-box">
+                    <span class="feature-label">NEW EPISODES</span>
+                    <h3>Seriallar</h3>
+                    <p>Yangi mavsumlar va qisqa seriyalar bilan uzluksiz tomosha.</p>
+                </div>
+
+                <div class="feature-box">
+                    <span class="feature-label">Curated</span>
+                    <h3>Qoidalar asosida tanlash</h3>
+                    <p>Janr, hissiyot va vaqt bo'yicha eng mos filmlar tavsiyasi.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="trailerModal" aria-hidden="true">
+        <div class="modal-panel">
+            <button class="modal-close" type="button" aria-label="Yopish">×</button>
+            <div class="modal-video-wrap">
+                <iframe id="trailerFrame" src="" title="Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('movieSearch');
+        const searchButton = document.querySelector('.search-btn');
+        const chips = document.querySelectorAll('.chip');
+        const cards = document.querySelectorAll('.movie-card');
+        const noResults = document.getElementById('noResults');
+        const modal = document.getElementById('trailerModal');
+        const iframe = document.getElementById('trailerFrame');
+        const closeModal = document.querySelector('.modal-close');
+        const trailerButtons = document.querySelectorAll('.trailer-btn');
+        const slides = document.querySelectorAll('.slide');
+        const navButtons = document.querySelectorAll('.nav-btn');
+
+        let activeFilter = 'all';
+        let slideIndex = 0;
+
+        function applyFilter() {
+            const query = searchInput.value.trim().toLowerCase();
+            let visibleCount = 0;
+
+            cards.forEach((card) => {
+                const title = card.dataset.title.toLowerCase();
+                const genre = card.dataset.genre.toLowerCase();
+                const description = card.dataset.description.toLowerCase();
+                const matchesText = !query || title.includes(query) || genre.includes(query) || description.includes(query);
+                const matchesGenre = activeFilter === 'all' || card.dataset.genre.split(/\s+/).includes(activeFilter);
+                const isVisible = matchesText && matchesGenre;
+                card.style.display = isVisible ? '' : 'none';
+                if (isVisible) visibleCount += 1;
+            });
+
+            noResults.hidden = visibleCount > 0;
+        }
+
+        searchInput.addEventListener('input', applyFilter);
+        searchButton.addEventListener('click', applyFilter);
+
+        chips.forEach((chip) => {
+            chip.addEventListener('click', () => {
+                chips.forEach((item) => item.classList.toggle('active', item === chip));
+                activeFilter = chip.dataset.filter;
+                applyFilter();
+            });
+        });
+
+        function openTrailer(url) {
+            iframe.src = url;
+            modal.classList.add('open');
+            modal.setAttribute('aria-hidden', 'false');
+        }
+
+        function closeTrailer() {
+            iframe.src = '';
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+        }
+
+        trailerButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const trailer = button.dataset.trailer;
+                if (trailer) openTrailer(trailer);
+            });
+        });
+
+        closeModal.addEventListener('click', closeTrailer);
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && modal.classList.contains('open')) closeTrailer();
+        });
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) closeTrailer();
+        });
+
+        function showSlide(index) {
+            slides.forEach((slide, idx) => {
+                slide.classList.toggle('active', idx === index);
+            });
+        }
+
+        navButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const direction = button.dataset.dir === 'next' ? 1 : -1;
+                slideIndex = (slideIndex + direction + slides.length) % slides.length;
+                showSlide(slideIndex);
+            });
+        });
+
+        setInterval(() => {
+            slideIndex = (slideIndex + 1) % slides.length;
+            showSlide(slideIndex);
+        }, 5000);
+    </script>
+</body>
+</html>

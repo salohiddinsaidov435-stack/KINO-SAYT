@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inception | CineZone</title>
+  <style>
+    :root {
+      --bg: #0a0f1d;
+      --bg-soft: #121a2d;
+      --panel: rgba(18, 26, 45, 0.88);
+      --panel-strong: #1d2940;
+      --accent: #ff5a5f;
+      --accent-2: #7c5cff;
+      --text: #eef3ff;
+      --muted: #a7b4d6;
+      --line: rgba(255,255,255,0.08);
+      --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #17223f 0%, #0a0f1d 42%, #050912 100%);
+      color: var(--text);
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .shell {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 28px;
+      padding: 12px 16px;
+      border: 1px solid var(--line);
+      background: rgba(9, 14, 25, 0.78);
+      backdrop-filter: blur(14px);
+      border-radius: 18px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .nav a:hover { color: var(--text); }
+
+    .player-layout {
+      display: grid;
+      grid-template-columns: 1.7fr 0.9fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .video-card, .info-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .video-card {
+      overflow: hidden;
+    }
+
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    .video-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .info-card {
+      padding: 28px 22px;
+    }
+
+    .chip {
+      display: inline-block;
+      background: rgba(124, 92, 255, 0.2);
+      color: #d9d1ff;
+      border: 1px solid rgba(124, 92, 255, 0.35);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.77rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 3vw, 3rem);
+      margin: 16px 0 10px;
+      line-height: 1.08;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 18px;
+    }
+
+    .description {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .btn.primary { background: linear-gradient(135deg, var(--accent), #ff7b54); color: white; }
+    .btn.secondary { background: transparent; border-color: var(--line); color: var(--text); }
+    .btn:hover { transform: translateY(-1px); }
+
+    .detail-box {
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+    }
+
+    .detail-box h3 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .detail-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: var(--text);
+      display: grid;
+      gap: 8px;
+    }
+
+    .detail-box li { color: var(--muted); }
+
+    .below {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .mini-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .mini-card h4 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 860px) {
+      .player-layout { grid-template-columns: 1fr; }
+      .below { grid-template-columns: 1fr; }
+      .topbar { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="logo">CineZone</div>
+      <nav class="nav">
+        <a href="./index.html">Bosh sahifa</a>
+        <a href="./loyihalar.html">Trendlar</a>
+        <a href="./kitoblar.html">Janrlar</a>
+        <a href="./aloqa.html">Bog'lanish</a>
+      </nav>
+    </header>
+
+    <main class="player-layout">
+      <section class="video-card">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/YoHD9XEInc0?autoplay=1" title="Inception trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <aside class="info-card">
+        <span class="chip">Sci‑Fi</span>
+        <h1>Inception</h1>
+        <div class="meta">
+          <span>⭐ 8.8 IMDb</span>
+          <span>2026</span>
+          <span>2h 28m</span>
+        </div>
+        <p class="description">
+          Dream, reality and danger collide in a thrilling story about stealing ideas from the subconscious.
+          A brilliant thief and a team of specialists are hired for one final mission: to plant an idea in the mind of a CEO.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="./index.html">Bosh sahifaga</a>
+          <a class="btn secondary" href="./kino2.html">Keyingi film</a>
+        </div>
+
+        <div class="detail-box">
+          <h3>Film haqida</h3>
+          <ul>
+            <li>Rejissyor: Christopher Nolan</li>
+            <li>Janr: Sci‑Fi / Thriller</li>
+            <li>Til: Inglizcha</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <section class="below">
+      <article class="mini-card">
+        <h4>Ko‘rish uchun</h4>
+        <p>Yorqin vizual effektlar, chuqur hikoya va ajoyib muqarrar voqealar bilan to‘ldirilgan tanlov.</p>
+      </article>
+      <article class="mini-card">
+        <h4>Hissiyot</h4>
+        <p>Qiziqarli, g‘azabli va bir oz noaniq his-tuyg‘ular bilan to‘la, asabiy film.</p>
+      </article>
+      <article class="mini-card">
+        <h4>Studio</h4>
+        <p>Warner Bros. va Legendary Pictures bilan yaratilgan klassik yulduzli film.</p>
+      </article>
+    </section>
+  </div>
+</body>
+</html>

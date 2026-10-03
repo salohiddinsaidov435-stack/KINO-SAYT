@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dune: Part Two | CineZone</title>
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --panel: rgba(18, 22, 34, 0.9);
+      --accent: #ffb347;
+      --accent-2: #7bdff2;
+      --text: #f5f7ff;
+      --muted: #b7c2d8;
+      --line: rgba(255,255,255,0.08);
+      --shadow: 0 25px 70px rgba(0,0,0,0.45);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(120deg, #0c101a 0%, #111827 20%, #090d16 100%);
+      color: var(--text);
+    }
+    a { text-decoration: none; color: inherit; }
+    .shell { max-width: 1280px; margin: 0 auto; padding: 30px 18px 60px; }
+    .topbar {
+      display: flex; justify-content: space-between; align-items: center; gap: 18px;
+      background: rgba(11,15,26,0.9); border: 1px solid var(--line); border-radius: 18px; padding: 14px 16px; margin-bottom: 28px;
+    }
+    .logo { font-size: 1.5rem; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
+    .nav { display: flex; gap: 16px; color: var(--muted); flex-wrap: wrap; }
+    .nav a:hover { color: var(--text); }
+    .layout { display: grid; grid-template-columns: 1.7fr 0.9fr; gap: 24px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 24px; box-shadow: var(--shadow); }
+    .video { overflow: hidden; }
+    .video-wrap { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+    .video-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .info { padding: 26px 22px; }
+    .tag { display: inline-block; background: rgba(255,179,71,0.18); color: #ffd9a4; border: 1px solid rgba(255,179,71,0.35); border-radius: 999px; padding: 7px 12px; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    h1 { margin: 16px 0 10px; font-size: clamp(2rem, 3vw, 3rem); }
+    .meta { display: flex; flex-wrap: wrap; gap: 12px; color: var(--muted); margin-bottom: 20px; }
+    .desc { color: var(--muted); line-height: 1.7; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 22px 0; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 12px; padding: 12px 18px; font-weight: 700; }
+    .primary { background: linear-gradient(135deg, var(--accent), #ff6b6b); color: black; }
+    .secondary { border: 1px solid var(--line); color: var(--text); }
+    .detail { border-top: 1px solid var(--line); padding-top: 16px; }
+    .detail h3 { margin: 0 0 10px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; font-size: 1rem; }
+    .detail ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; color: var(--muted); }
+    .bottom { margin-top: 28px; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+    .mini { padding: 18px; }
+    .mini h4 { margin: 0 0 8px; }
+    .mini p { margin: 0; color: var(--muted); line-height: 1.7; }
+    @media (max-width: 860px) { .layout, .bottom { grid-template-columns: 1fr; } .topbar { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="logo">CineZone</div>
+      <nav class="nav">
+        <a href="./index.html">Bosh sahifa</a>
+        <a href="./loyihalar.html">Trendlar</a>
+        <a href="./kino.html">Inception</a>
+        <a href="./aloqa.html">Bog'lanish</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="card video">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/Way9Dexny3w?autoplay=1" title="Dune: Part Two trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <aside class="card info">
+        <span class="tag">Epic</span>
+        <h1>Dune: Part Two</h1>
+        <div class="meta">
+          <span>⭐ 8.9 IMDb</span>
+          <span>2024</span>
+          <span>2h 46m</span>
+        </div>
+        <p class="desc">
+          Paul Atreides continues on a dangerous desert journey, where power, prophecy and survival shape the future of the galaxy.
+          A breathtaking sci‑fi epic full of courage, destiny and raw emotion.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="./index.html">Bosh sahifaga</a>
+          <a class="btn secondary" href="./kino3.html">Keyingi film</a>
+        </div>
+
+        <div class="detail">
+          <h3>Film haqida</h3>
+          <ul>
+            <li>Rejissyor: Denis Villeneuve</li>
+            <li>Janr: Sci‑Fi / Adventure</li>
+            <li>Til: Inglizcha</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <section class="bottom">
+      <article class="card mini">
+        <h4>Sayohat</h4>
+        <p>Yashirin kuch, dostlik va dunyo larzishi bilan ajralib turuvchi kattalikdagi sarguzasht.</p>
+      </article>
+      <article class="card mini">
+        <h4>Yana bir ta'sir</h4>
+        <p>Har bir sahna yashil, quyuq ranglar va ulkan makon hissini uyg‘otadi.</p>
+      </article>
+      <article class="card mini">
+        <h4>Mustaqil ko‘rish</h4>
+        <p>Bu film katta ekran uchun juda mos, lekin ijodiy filmni onlayn ko‘rish uchun ham ajoyib.</p>
+      </article>
+    </section>
+  </div>
+</body>
+</html>
